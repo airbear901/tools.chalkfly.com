@@ -1,0 +1,303 @@
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+* {
+	color: #4D4D4D;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.container-full > div.row {
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 300;
+	padding-bottom: 8px;
+	border-bottom: 1px dotted #CCCCCC;
+	text-align: center;
+
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+} 
+
+h3 {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+a {
+	text-transform: uppercase;
+	color: #2B84D2;
+} a:hover, a:visited, a:active {
+	color: #4D4D4D;
+	text-decoration: none;
+} p > a {
+	text-transform: none;
+	text-decoration: underline;
+}
+
+label {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 0px;
+} label span {
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+input, textarea {
+	display: block;
+	outline: none;
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+	/*-webkit-appearance: none;*/
+	border-radius: 0;
+} input::-webkit-input-placeholder, 
+input::-moz-placeholder,
+input:-moz-placeholder,
+input:-ms-input-placeholder { 
+	color: red;
+} input:focus, textarea:focus {
+	border: 1px solid #2B84D2;
+} input.error {
+	border: 1px solid #FD5E47;
+}
+
+/**** Radio buttons & Checkboxes ****/
+/*TODO: IE 8 Fallback*/
+input[type="checkbox"],
+input[type="radio"] {
+	/*visibility: hidden;
+	height: 0px;
+	width: 0px;*/
+	padding-top: 10px;
+}
+input[type="checkbox"] + span:before {
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	content: '';
+	background: url('../img/checkbox_unchecked.svg') no-repeat;
+	 @extend %checkbox-unchecked  
+	position: relative;
+	top: 7px;
+}
+input[type="radio"] + span:before {
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	content: "";
+	background: url('../img/radio-button_Off.svg') no-repeat; 
+	position: relative;
+	top: 7px;
+}
+input[type="checkbox"]:checked + span:before {
+	background: url('../img/checkbox_checked.svg') no-repeat; 
+}
+input[type="radio"]:checked + span:before {
+	background: url('../img/radio-button_On.svg') no-repeat; 
+}
+label.checkbox-wrapper,
+label.radio-wrapper {
+	position:relative;
+	bottom: 1em;
+}
+
+td {
+	padding: 5px;
+	text-align: center;
+}
+
+th {
+	padding: 5px;
+	text-align: center;
+	
+}
+
+
+/**** Buttons ****/
+a.button, input[type="submit"].button {
+	display: inline-block;
+	text-transform: none;
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-align: left;
+	background-image: url('../img/chevron_right_FD5E47.svg');
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 14px;
+} a.primary, input[type="submit"].button {
+	border: 1px solid #FD5E47;
+	color: #FD5E47;
+	background-color: white;
+} a.button.primary:active,
+input[type="submit"]:active,
+a.button.primary:hover,
+input[type="submit"]:hover {
+	color: white;
+	background-color: #FD5E47;
+	background-image: url('../img/chevron_right_FFFFFF.svg');
+} a.button.secondary {
+	border: 1px solid #4D4D4D;
+	color: #4D4D4D;
+	background-color: white;
+	background-image: url('../img/chevron_right_4D4D4D.svg');
+} a.button.secondary:active,
+a.button.secondary:hover {
+	color: white;
+	background-color: #4D4D4D;
+	background-image: url('../img/chevron_right_FFFFFF.svg');
+}
+
+/**** Select Boxes ****/
+.fancy-select {
+    background-color: white;
+    border: 1px solid #4D4D4D;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+	background-image: url('../img/chevron_down_4D4D4D.svg');
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 21px;
+} .fancy-select:hover {
+    background-color: #4D4D4D;
+    background-image: url('../img/chevron_down_FFFFFF.svg');
+} .fancy-select select {
+    padding: 10px;
+    width: 120%;
+    z-index: 1;
+    position: relative;
+    border: none;
+    color: #4D4D4D;
+    background: none; /* This is super important */
+    -webkit-appearance: none;
+    font-size: inherit;
+    font-weight: inherit;
+} .fancy-select:hover select {
+	color: white;
+	cursor: pointer;
+}
+
+.hero-image {
+	background: url('../img/hero-image-background.jpg') no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	padding: 50px;
+	word-wrap:break-word;
+} .hero-image span {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 100;
+	color: white;
+	letter-spacing: 0.5px;
+	line-height: 50px
+}
+
+.emphasized {
+	color: #FD5E47;
+}
+
+.text-with-caption {
+	border: 1px solid #CCCCCC;
+	padding: 30px;
+	text-align: center;
+	margin-bottom: 10px;
+} .text-with-caption > blockquote {
+	font-size: 14px;
+	font-weight: 300;
+	border: none;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+} .text-with-caption > cite {
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	border-top: 1px dotted #CCCCCC;
+	width: 100%;
+	padding-top: 10px;
+} .text-with-caption > cite > span {
+	display: block;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+.image-with-caption {
+	padding: 20px;
+} .image-with-caption img {
+	margin-bottom: 5px;
+} .image-with-caption > p {
+	font-size: 12px;
+} .image-with-caption > p > span {
+	text-transform: uppercase;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.orange {
+	color: #f3755b;
+}
+
+.blue {
+	color: #3398db;
+}
+
+#logo {
+	width: 150px;
+}
+
+body {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+table.tablesorter thead tr .header {
+	cursor: pointer;
+}
+
+th.headerSortDown {
+	color: #3398db;
+}
+
+th.headerSortUp {
+	color: #3398db;
+}
+
+select {
+	margin-bottom: 10px;
+}
